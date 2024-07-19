@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: blueviolet;
+            min-height: 100vh;
+            display:grid;
+            grid-template-columns:repeat(2, minmax(48%, 1fr));
+            gap:20px;
+            padding: 20px;
+        }
+        .card{
+            background-color: green;
+            height: 250px;
+            position: relative;
+        }
+
+        .card-one{
+            background-color: red;
+            grid-column:1 /span 2;
+        }
+
+        .badge{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 12px;
+            font-size: 12px;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        .badge:hover{
+            background-color: white;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="card card-one"><span class="badge">Badge</span></div>
+            <div class="card"><span class="badge">Badge</span></div>
+            <div class="card"><span class="badge">Badge</span></div>
+            <div class="card"><span class="badge">Badge</span></div>
+            <div class="card"><span class="badge">Badge</span></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout-Flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-color: blue;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+      }
+
+      .card {
+        background-color: brown;
+        height: 250px;
+        flex-basis: 45%;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .card-one{
+        background-color: blueviolet;
+        flex-basis: 95%;
+      }
+
+      .badge{
+        position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 12px;
+            font-size: 12px;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: all 0.5s
+      }
+
+      .badge:hover{
+        background-color: red;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="card card-one"><span class="badge">Badge</span></div>
+        <div class="card"><span class="badge">Badge</span></div>
+        <div class="card"><span class="badge">Badge</span></div>
+        <div class="card"><span class="badge">Badge</span></div>
+        <div class="card"><span class="badge">Badge</span></div>
+      </section>
+    </main>
+  </body>
+</html>
